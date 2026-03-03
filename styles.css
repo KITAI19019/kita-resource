@@ -54,7 +54,7 @@ footer { text-align: center; margin-top: 20px; }
     margin: 10px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1245px) {
     .work-item {
         width: 100%; 
         margin: 10px 0;
