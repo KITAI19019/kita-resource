@@ -54,6 +54,19 @@ footer { text-align: center; margin-top: 20px; }
     margin: 10px;
 }
 
+@media (max-width: 980px) {
+    .work-item {
+        width: 100%; 
+        margin: 10px 0;
+    }
+    a[web] {
+        display: block;  
+        width: 100%;    
+        text-align: center;
+        margin: 10px 0;  
+    }
+}
+
 /* 手机屏 */
 @media (max-width: 768px) {
     .work-item {
@@ -67,6 +80,7 @@ footer { text-align: center; margin-top: 20px; }
         text-align: center;
         margin: 10px 0;  /* 加间距防挤 */
     }
+
     
     img {
         width: 100%;    
