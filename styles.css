@@ -45,3 +45,40 @@ nav a:hover {
     text-decoration: underline;
 }
 footer { text-align: center; margin-top: 20px; }
+
+/* 默认样式（大屏） */
+.work-item {
+    width: 100%;  
+    display: inline-block; 
+    margin: 10px;
+}
+
+/* 手机屏 */
+@media (max-width: 768px) {
+    .work-item {
+        width: 100%; 
+        margin: 10px 0;
+    }
+    
+    a[download] {
+        display: block;  /* 按钮独占一行 */
+        width: 100%;     /* 全宽 */
+        text-align: center;
+        margin: 10px 0;  /* 加间距防挤 */
+    }
+    
+    img {
+        width: 100%;    
+        height: auto;
+    }
+}
+
+/* 更小屏 */
+@media (max-width: 480px) {
+    body {
+        margin: 10px; 
+    }
+    h3, p {
+        font-size: 16px;  
+    }
+}
