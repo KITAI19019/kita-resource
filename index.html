@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
+<!-- 搜索功能，暂时不需要-->
+<!--<input type="text" id="searchInput" placeholder="搜索..." oninput="searchWorks()">-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 手机适配 -->
@@ -13,7 +15,7 @@
     </header>
     
     <section id="works">
-        <h2>作品列表</h2>
+        <h2>字幕作品列表</h2>
         <div class="work-item">
             <h3>金牌得主第二季</h3>
             <img src="assets\Medalist.jpg" alt="作品描述" width="900">
@@ -40,5 +42,9 @@
     </section>
     
     <script src="scripts.js"></script>
+    
+    <footer>
+        <p>访客数: <span id="visitorCount">0</span></p>
+    </footer>
 </body>
 </html>
