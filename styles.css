@@ -133,7 +133,7 @@ footer {
  
     a[download] {
         display: block;
-        width: 90%; 
+        width: 89%; 
         text-align: center;
         margin: 12px 0;
         padding: 14px 20px; /* 手机上按钮再大一点好点 */
@@ -141,7 +141,7 @@ footer {
 
     a[web] {
         display: block;
-        width: 90%; 
+        width: 89%; 
         text-align: center;
         margin: 12px 0;
         padding: 14px 20px;
