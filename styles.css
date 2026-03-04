@@ -120,14 +120,14 @@ footer {
 
 /* 默认样式（大屏） */
 .work-item {
-    width: 100%;  
+    width: 89%;  
     display: inline-block;  
     margin: 10px;
 }
 
 @media (max-width: 768px) {
     .work-item {
-        width: 90%; 
+        width: 89%; 
         margin: 10px 0;
     }
  
