@@ -1,59 +1,124 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     margin: 20px;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #f0e8ff, #fff0f8, #e8f4ff); /* 非常浅的粉蓝紫渐变，静态 */
+    color: #2d1b47; /* 深紫灰，阅读舒适 */
+    min-height: 100vh;
 }
+
 header {
     text-align: center;
-    background: #007bff;
-    color: white;
+    background: linear-gradient(135deg, #d7bfff, #ffd1e8); /* 明亮浅紫粉 */
+    color: #4b2e7f;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 
+        0 6px 20px rgba(180, 140, 255, 0.25),
+        inset 0 2px 8px rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.4);
 }
+
 .work-item {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px 0;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid rgba(200, 180, 255, 0.5);
+    padding: 20px;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 
+        0 8px 25px rgba(180, 140, 255, 0.18),
+        inset 0 1px 4px rgba(255,255,255,0.9);
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.work-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 14px 35px rgba(180, 140, 255, 0.28),
+        inset 0 1px 6px rgba(255,255,255,0.95);
+}
+
 img {
     display: block;
-    margin: 0 auto;
-    max-width: 100%;  /* 响应式 */
+    margin: 0 auto 15px;
+    max-width: 100%;
+    border-radius: 14px;
+    border: 3px solid rgba(255, 220, 240, 0.9);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 28px rgba(180, 140, 255, 0.25);
+}
+
 a {
     display: inline-block;
-    background: #28a745;
+    background: linear-gradient(145deg, #a78bfa, #ff9ec1);
     color: white;
-    padding: 8px 12px;
+    padding: 12px 22px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 999px;               /* 超级圆润 */
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    box-shadow: 
+        0 6px 16px rgba(167, 139, 250, 0.4),
+        inset 0 -3px 8px rgba(0,0,0,0.15),    /* 内凹立体感 */
+        inset 0 2px 5px rgba(255,255,255,0.5); /* 高光 */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.35);
+    transition: all 0.22s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25); /* 文字轻微阴影增强区分度 */
 }
+
 a:hover {
-    background: #218838;
+    background: linear-gradient(145deg, #c4a1ff, #ffbad1);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 10px 24px rgba(167, 139, 250, 0.55),
+        inset 0 -4px 10px rgba(0,0,0,0.18),
+        inset 0 3px 7px rgba(255,255,255,0.6);
 }
+
 nav {
     text-align: center;
-    margin: 10px 0;
+    margin: 15px 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(200,180,255,0.3);
 }
+
 nav a {
-    margin: 0 10px;
-    color: white;
+    margin: 0 16px;
+    color: #6b4ca8;
     text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: all 0.2s;
 }
+
 nav a:hover {
-    text-decoration: underline;
-}
-footer { text-align: center; margin-top: 20px; }
-
-/* 默认样式（大屏） */
-.work-item {
-    width: 100%;  
-    display: inline-block; 
-    margin: 10px;
+    color: #9f6eff;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(6px);
 }
 
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #6b4ca8;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+/* 保留原有的媒体查询，不做改动 */
 @media (max-width: 1245px) {
     .work-item {
         width: 100%; 
@@ -67,7 +132,6 @@ footer { text-align: center; margin-top: 20px; }
     }
 }
 
-/* 手机屏 */
 @media (max-width: 768px) {
     .work-item {
         width: 100%; 
@@ -75,23 +139,22 @@ footer { text-align: center; margin-top: 20px; }
     }
     
     a[download] {
-        display: block;  /* 按钮独占一行 */
-        width: 100%;     /* 全宽 */
+        display: block;
+        width: 100%;
         text-align: center;
-        margin: 10px 0;  /* 加间距防挤 */
+        margin: 12px 0;
+        padding: 14px 20px; /* 手机上按钮再大一点好点 */
     }
 
-    
     img {
         width: 100%;    
         height: auto;
     }
 }
 
-/* 更小屏 */
 @media (max-width: 480px) {
     body {
-        margin: 10px; 
+        margin: 12px; 
     }
     h3, p {
         font-size: 16px;  
