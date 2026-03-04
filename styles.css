@@ -118,18 +118,11 @@ footer {
     opacity: 0.9;
 }
 
-/* 保留原有的媒体查询，不做改动 */
-@media (max-width: 1245px) {
-    .work-item {
-        width: 100%; 
-        margin: 10px 0;
-    }
-    a[web] {
-        display: block;  
-        width: 100%;    
-        text-align: center;
-        margin: 10px 0;  
-    }
+/* 默认样式（大屏） */
+.work-item {
+    width: 100%;  
+    display: inline-block;  
+    margin: 10px;
 }
 
 @media (max-width: 768px) {
