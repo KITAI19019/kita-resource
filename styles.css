@@ -1,6 +1,7 @@
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     margin: 20px;
+    padding-top: 60px; /* 留出固定导航栏高度 */
     background: linear-gradient(135deg, #f0e8ff, #fff0f8, #e8f4ff); /* 非常浅的粉蓝紫渐变，静态 */
     color: #2d1b47; /* 深紫灰，阅读舒适 */
     min-height: 100vh;
@@ -92,6 +93,7 @@ nav {
     backdrop-filter: blur(10px);
     border-radius: 12px;
     border: 1px solid rgba(200,180,255,0.3);
+    width: 91.7%;
 }
 
 nav a {
@@ -116,6 +118,69 @@ footer {
     color: #6b4ca8;
     font-size: 0.95em;
     opacity: 0.9;
+}
+
+/* 导航栏 */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(200,180,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 6px 12px;
+    user-select: none;
+}
+
+nav .menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav .menu-links a {
+    margin: 0 12px;
+    padding: 8px 14px;
+    font-size: 0.9em;
+    background: none;
+    color: #4b2e7f;
+    box-shadow: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+nav .menu-links a:hover {
+    background: rgba(255,255,255,0.7);
+}
+
+/* 菜单切换 */
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav .menu-icon {
+        display: block;
+    }
+    nav .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    #menu-toggle:checked + .menu-icon + .menu-links {
+        display: flex;
+    }
 }
 
 /* 默认样式（大屏） */
