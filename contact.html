@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KITA资源站 - 提交反馈</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>KITA资源站</h1>
+        <p>欢迎反馈！</p>
+    </header>
+
+    <main style="max-width: 600px; margin: 40px auto; padding: 20px;">
+        <h2>提交反馈</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" id="feedbackForm">
+            <input type="hidden" name="access_key" value="5051d239-8091-474a-8a7c-e8c43d040cc6">
+
+            <label>反馈类型</label>
+            <select name="type" required>
+                <option value="">请选择</option>
+                <option value="建议">建议</option>
+                <option value="Bug报告">Bug报告</option>
+                <option value="资源请求">资源请求</option>
+                <option value="其他">其他</option>
+            </select>
+
+            <label>反馈内容</label>
+            <textarea name="message" rows="8" placeholder="请详细描述..." required></textarea>
+
+            <label>联系方式（可选）</label>
+            <input type="text" name="contact" placeholder="电话号码 / 邮箱">
+
+            <!-- 防垃圾邮件隐藏字段 -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+            <button type="submit">提交反馈</button>
+        </form>
+    </main>
+
+
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function() {
+            setTimeout(() => {
+                alert('✅ 反馈提交成功！感谢你～我会尽快查看！');
+                window.location.href = 'index.html';  // 提交后跳回首页
+            }, 800);
+        });
+    </script>
+
+        <!-- 页脚保持一致 -->
+    <footer>
+    <div class="footer-content">
+                <p class="copyright">
+            Copyright © 2026 KITA 
+        </p>
+    </div>
+    </footer>
+</body>
+</html>

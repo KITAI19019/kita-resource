@@ -260,3 +260,166 @@ footer {
     font-size: 14px;
     opacity: 0.9;
 }
+
+
+
+
+/* ==================== 反馈页面专用美化==================== */
+
+/* 1. 粘性页脚 + 整体布局 */
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;                    /* 去掉之前的20px，让header顶到最上 */
+    padding: 0;
+}
+
+/* main 自动撑开，让 footer 贴底 */
+main {
+    flex: 1;
+    max-width: 620px;
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+}
+
+/* 2. Header 改成图片里那种全宽渐变横条 */
+header {
+    width: 100% !important;
+    margin: 0 auto;
+    border-radius: 0;             /* 去掉圆角，变成横条 */
+    padding: 25px 20px;
+    background: linear-gradient(90deg, #d7bfff, #ffd1e8) !important;
+}
+
+/* 3. 表单整体磨砂玻璃卡片 */
+form {
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 35px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(200, 180, 255, 0.45);
+    box-shadow: 
+        0 12px 35px rgba(180, 140, 255, 0.22),
+        inset 0 2px 8px rgba(255,255,255,0.85);
+}
+
+/* 标签文字 */
+label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #4b2e7f;
+    font-weight: 700;
+    font-size: 1.05em;
+}
+
+/* 输入框 / 选择框 / 文本域 统一磨砂立体风格 */
+input[type="text"],
+select,
+textarea {
+    width: 90%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(200, 180, 255, 0.6);
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 16px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.06);
+    transition: all 0.25s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 180px;
+}
+
+/* 聚焦时高亮发光（二次元特效） */
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.25);
+    background: #fff;
+}
+
+/* 4. 提交按钮 → 完全和首页按钮同风格（立体圆润磨砂） */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 30px auto 0;
+    background: linear-gradient(145deg, #a78bfa, #ff9ec1);
+    color: white;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 999px;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    box-shadow: 
+        0 8px 20px rgba(167, 139, 250, 0.45),
+        inset 0 -4px 10px rgba(0,0,0,0.18),
+        inset 0 4px 8px rgba(255,255,255,0.55);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(145deg, #c4a1ff, #ffbad1);
+    transform: translateY(-4px);
+    box-shadow: 
+        0 14px 30px rgba(167, 139, 250, 0.6),
+        inset 0 -5px 12px rgba(0,0,0,0.22),
+        inset 0 5px 10px rgba(255,255,255,0.65);
+}
+
+/* 5. 页脚强制吸底 + 图片里那种紫粉渐变底栏 */
+footer {
+    margin-top: auto;               /* 关键：吸底 */
+    width: 100%;
+    background: linear-gradient(90deg, #6b2e8a, #e04e9e);
+    color: white;
+    padding: 22px 0;
+    text-align: center;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.95em;
+    opacity: 0.95;
+}
+
+/* ==================== 响应式（手机端更舒服） ==================== */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    form {
+        padding: 25px 20px;
+    }
+    button[type="submit"] {
+        padding: 16px 30px;
+        font-size: 1.05em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em;
+    }
+    label {
+        font-size: 1em;
+    }
+}
