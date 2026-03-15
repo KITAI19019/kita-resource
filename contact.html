@@ -17,16 +17,15 @@
         <form action="https://api.web3forms.com/submit" method="POST" id="feedbackForm">
             <input type="hidden" name="access_key" value="5051d239-8091-474a-8a7c-e8c43d040cc6">
 
-            <label>反馈类型</label>
+            <label>反馈类型（必填）</label>
             <select name="type" required>
-                <option value="">请选择</option>
                 <option value="建议">建议</option>
                 <option value="Bug报告">Bug报告</option>
                 <option value="资源请求">资源请求</option>
                 <option value="其他">其他</option>
             </select>
 
-            <label>反馈内容</label>
+            <label>反馈内容（必填）</label>
             <textarea name="message" rows="8" placeholder="请详细描述..." required></textarea>
 
             <label>联系方式（可选）</label>
