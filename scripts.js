@@ -3,7 +3,7 @@ function downloadAlert(event) {
         'file_name': event.target.href.split('/').pop(),  // 取文件名
         'category': '资源下载'
     });
-    alert("感谢下载！欢迎反馈。");
+    alert("感谢下载！欢迎反馈。若视频不显示请尝试更换浏览器或设备");
 }
 // 加到链接
 document.querySelectorAll('a[download]').forEach(link => {
