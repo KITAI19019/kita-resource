@@ -1,96 +1,109 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 手机适配 -->
-    <title>KITA的资源站</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字幕汉化 — KITA resource</title>
+    <meta name="description" content="KITA字幕汉化作品列表，包含尖帽子的魔法工坊、金牌得主等动漫字幕下载。">
+    <link rel="stylesheet" href="blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6Z9MSH7X2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-E6Z9MSH7X2');
+    </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6Z9MSH7X2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E6Z9MSH7X2');
-</script>
-
 
 <body>
     <header>
-        <h1>字幕汉化</h1>
-        <p>欢迎浏览和下载！</p>
-        <nav>
-            <a href="resource.html">资源站首页</a>
-        </nav>
+        <h1><a href="index.html">KITA resource</a></h1>
+        <div class="search-box">
+            <input type="search" id="searchInput" placeholder="搜索文章...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
     </header>
-    
-    <section id="works">
-        <h2>字幕列表</h2>
 
-        <div class="work-item">
-            <h3>尖帽子的魔法工坊</h3>
-            <img src="assets\chatu\tongari-hat_main.jpg" alt="作品描述" width="900">
-            <p>MP4</p>
-            <a href="https://yun.139.com/shareweb/#/w/i/2uh8U4dfhrp7a" download class="transl">第01话，提取码2hnq</a>
-            
-            
+    <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu-links">
+            <a href="index.html">首页</a>
+            <a href="resource.html" class="active">资源站</a>
+            <a href="about.html">关于</a>
+            <a href="donate.html">赞助</a>
         </div>
+    </nav>
 
+    <div class="page-body">
+        <main>
+            <section id="works">
+                <h2>字幕列表</h2>
 
-        <div class="work-item">
-            <h3>金牌得主第二季</h3>
-            <img src="assets\Medalist.jpg" alt="作品描述" width="900">
-            <p>MP4/KMV</p>
-            <a href="https://cloud.kitares.dpdns.org/file/Medalist/1772690602977__KITA_medalistSE202.mp4" download class="transl">第2话</a>
-            <a href="https://cloud.kitares.dpdns.org/file/Medalist/1772694770141__KITA_Medalist.S02E03.mp4" download class="transl">第3话</a>
-            <a href="https://cloud.kitares.dpdns.org/file/Medalist/1772690519059__KITA_Medalist.S02E04.mp4" download class="transl">第4话</a>
-            <a href="https://cloud.kitares.dpdns.org/file/Medalist/1772690575526__KITA_Medalist.S02E05.mp4" download class="transl">第5话</a>
-            <a href="https://yun.139.com/shareweb/#/w/i/2u8op9K91Hva6" download class="transl">第6话，提取码op64</a>
-            <a href="https://yun.139.com/shareweb/#/w/i/2tyafkwb00Xsv" download class="transl">第7话，提取码9co5</a>
-            <a href="https://yun.139.com/shareweb/#/w/i/2tQE7Nmz8tzx8" download class="transl">第8话，提取码e19e</a>
-            <a href="https://yun.139.com/shareweb/#/w/i/2tZvSfh6Xuvq7" download class="transl">第9话，提取码57cc</a>
-            <p>字幕文件</p>
-            <a href="assets\KITAMedalist.S02E02.ass" download class="transl">第2话</a>
-            <a href="assets\KITAMedalist.S02E04.ass" download class="transl">第4话</a>
-            <a href="assets\KITAMedalist.S02E05.ass" download class="transl">第5话</a>
-            <a href="assets\KITAMedalist.S02E06.ass" download class="transl">第6话</a>
-            <a href="assets\KITAMedalist.S02E07.ass" download class="transl">第7话</a>
-            <a href="assets\KITAMedalist.S 02E08.ass" download class="transl">第8话</a>
-            <a href="assets\KITAMedalist.S02E09.ass" download class="transl">第9话</a>
-        </div>
+                <div class="work-item">
+                    <h3>尖帽子的魔法工坊</h3>
+                    <img src="assets/chatu/tongari-hat_main.jpg" alt="尖帽子的魔法工坊" style="max-width:500px;">
+                    <p>MP4</p>
+                    <a href="https://yun.139.com/shareweb/#/w/i/2uh8U4dfhrp7a" download class="transl">第01话，提取码2hnq</a>
+                </div>
 
-        <div class="work-item">
-            <h3>与游戏中心的少女异文话交流的故事</h3>
-            <img src="assets\gamecenter.jpg" alt="作品描述" width="900">
-            <p>点击相应集数下载字幕文件</p>
-            <a href="assets\KITAGamecenter05_ja.ass" download class="transl">[生肉]第5话</a>
-            <a href="assets/KITAGamecenter05.ass" download class="transl">第5话</a>
-            <a href="assets\KITAGamecenter06_ja.ass" download class="transl">[生肉]第6话</a>
-            <a href="assets\KITAGamecenter07.ass" download class="transl">第7话</a>
-        </div>  
-    </section>
+                <div class="work-item">
+                    <h3>金牌得主第二季</h3>
+                    <img src="assets/Medalist.jpg" alt="金牌得主第二季" style="max-width:500px;">
+                    <p>MP4/MKV</p>
+                    <a href="https://cloud.kitares.dpdns.org/file/Medalist/1772690602977__KITA_medalistSE202.mp4"
+                        download class="transl">第2话</a>
+                    <a href="https://cloud.kitares.dpdns.org/file/Medalist/1772694770141__KITA_Medalist.S02E03.mp4"
+                        download class="transl">第3话</a>
+                    <a href="https://cloud.kitares.dpdns.org/file/Medalist/1772690519059__KITA_Medalist.S02E04.mp4"
+                        download class="transl">第4话</a>
+                    <a href="https://cloud.kitares.dpdns.org/file/Medalist/1772690575526__KITA_Medalist.S02E05.mp4"
+                        download class="transl">第5话</a>
+                    <a href="https://yun.139.com/shareweb/#/w/i/2u8op9K91Hva6" download class="transl">第6话，提取码op64</a>
+                    <a href="https://yun.139.com/shareweb/#/w/i/2tyafkwb00Xsv" download class="transl">第7话，提取码9co5</a>
+                    <a href="https://yun.139.com/shareweb/#/w/i/2tQE7Nmz8tzx8" download class="transl">第8话，提取码e19e</a>
+                    <a href="https://yun.139.com/shareweb/#/w/i/2tZvSfh6Xuvq7" download class="transl">第9话，提取码57cc</a>
+                    <p>字幕文件</p>
+                    <a href="assets/KITAMedalist.S02E02.ass" download class="transl">第2话</a>
+                    <a href="assets/KITAMedalist.S02E04.ass" download class="transl">第4话</a>
+                    <a href="assets/KITAMedalist.S02E05.ass" download class="transl">第5话</a>
+                    <a href="assets/KITAMedalist.S02E06.ass" download class="transl">第6话</a>
+                    <a href="assets/KITAMedalist.S02E07.ass" download class="transl">第7话</a>
+                    <a href="assets/KITAMedalist.S 02E08.ass" download class="transl">第8话</a>
+                    <a href="assets/KITAMedalist.S02E09.ass" download class="transl">第9话</a>
+                </div>
 
-    <aside>
+                <div class="work-item">
+                    <h3>与游戏中心的少女异文话交流的故事</h3>
+                    <img src="assets/gamecenter.jpg" alt="游戏中心的少女" style="max-width:500px;">
+                    <p>点击相应集数下载字幕文件</p>
+                    <a href="assets/KITAGamecenter05_ja.ass" download class="transl">[生肉]第5话</a>
+                    <a href="assets/KITAGamecenter05.ass" download class="transl">第5话</a>
+                    <a href="assets/KITAGamecenter06_ja.ass" download class="transl">[生肉]第6话</a>
+                    <a href="assets/KITAGamecenter07.ass" download class="transl">第7话</a>
+                </div>
+            </section>
+        </main>
+
+        <aside>
             <div class="sidebar-section">
                 <h3>赞助，可在首页找到你的头像</h3>
-                <a href="https://ifdian.net/a/kitarescourse">
-                    <img src="assets\chatu\爱发电.jpg" alt="支持我的翻译" width="100%">
+                <a href="" target="_blank">
+                    <img src="" alt="支持我的翻译">
                 </a>
-
             </div>
         </aside>
-    
+    </div>
+
     <script src="scripts.js"></script>
 
     <footer>
-    <div class="footer-content">
-                <p class="copyright">
-            Copyright © 2026 KITA 
-        </p>
-    </div>
+        <div class="footer-content">
+            <p class="copyright">Copyright &copy; 2026 KITA</p>
+        </div>
     </footer>
 </body>
+
 </html>

@@ -1,61 +1,86 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KITA资源站 - 提交反馈</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>提交反馈 — KITA resource</title>
+    <meta name="description" content="向KITA resource提交反馈、建议或资源请求。">
+    <link rel="stylesheet" href="blog.css">
 </head>
+
 <body>
     <header>
-        <h1>KITA资源站</h1>
-        <p>欢迎反馈！</p>
+        <h1><a href="index.html">KITA resource</a></h1>
+        <div class="search-box">
+            <input type="search" id="searchInput" placeholder="搜索文章...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
     </header>
 
-    <main style="max-width: 600px; margin: 40px auto; padding: 20px;">
-        <h2>提交反馈</h2>
-        <form action="https://api.web3forms.com/submit" method="POST" id="feedbackForm">
-            <input type="hidden" name="access_key" value="5051d239-8091-474a-8a7c-e8c43d040cc6">
+    <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu-links">
+            <a href="index.html">首页</a>
+            <a href="resource.html">资源站</a>
+            <a href="about.html">关于</a>
+            <a href="donate.html">赞助</a>
+        </div>
+    </nav>
 
-            <label>反馈类型（必填）</label>
-            <select name="type" required>
-                <option value="建议">建议</option>
-                <option value="Bug报告">Bug报告</option>
-                <option value="资源请求">资源请求</option>
-                <option value="其他">其他</option>
-            </select>
+    <div class="page-body">
+        <main>
+            <div class="post">
+                <h1>提交反馈</h1>
+                <form action="https://api.web3forms.com/submit" method="POST" id="feedbackForm">
+                    <input type="hidden" name="access_key" value="5051d239-8091-474a-8a7c-e8c43d040cc6">
 
-            <label>反馈内容（必填）</label>
-            <textarea name="message" rows="8" placeholder="请详细描述..." required></textarea>
+                    <label>反馈类型（必填）</label>
+                    <select name="type" required>
+                        <option value="建议">建议</option>
+                        <option value="Bug报告">Bug报告</option>
+                        <option value="资源请求">资源请求</option>
+                        <option value="其他">其他</option>
+                    </select>
 
-            <label>联系方式（可选）</label>
-            <input type="text" name="contact" placeholder="电话号码 / 邮箱">
+                    <label>反馈内容（必填）</label>
+                    <textarea name="message" rows="8" placeholder="请详细描述..." required></textarea>
 
-            <!-- 防垃圾邮件隐藏字段 -->
-            <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                    <label>联系方式（可选）</label>
+                    <input type="text" name="contact" placeholder="电话号码 / 邮箱">
 
-            <button type="submit">提交反馈</button>
-        </form>
-    </main>
+                    <!-- Anti-spam hidden field -->
+                    <input type="checkbox" name="botcheck" style="display:none;">
 
+                    <button type="submit">提交反馈</button>
+                </form>
+            </div>
+        </main>
+    </div>
 
+    <footer>
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="https://github.com/kitai19019/" target="_blank">GitHub主页</a> •
+                <a href="contact.html">提交反馈</a>
+            </nav>
+            <p class="copyright">Copyright &copy; 2026 KITA</p>
+        </div>
+    </footer>
 
     <script>
-        document.getElementById('feedbackForm').addEventListener('submit', function() {
+        document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+            const btn = this.querySelector('button[type="submit"]');
+            btn.textContent = '提交中...';
+            btn.disabled = true;
+            // web3forms will handle the redirect; show feedback after delay
             setTimeout(() => {
                 alert('✅ 反馈提交成功！感谢你～我会尽快查看！');
-                window.location.href = 'resource.html';  
-            }, 800);
+                window.location.href = 'index.html';
+            }, 1200);
         });
     </script>
-
-        <!-- 页脚保持一致 -->
-    <footer>
-    <div class="footer-content">
-                <p class="copyright">
-            Copyright © 2026 KITA 
-        </p>
-    </div>
-    </footer>
 </body>
+
 </html>

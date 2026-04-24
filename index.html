@@ -4,88 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KITAres</title>
+    <title>KITA resource — 首页</title>
+    <meta name="description" content="KITA resource 博客首页，分享资源、字幕汉化与实用知识。">
     <link rel="stylesheet" href="blog.css">
     <meta name="google-site-verification" content="RxwDLP9750uN12gTokWZt91GcfNB5LDwfVF3OKlH2Cw" />
     <meta name="baidu-site-verification" content="codeva-1CM4PuyWOF" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6Z9MSH7X2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-E6Z9MSH7X2');
+    </script>
 </head>
 
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6Z9MSH7X2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E6Z9MSH7X2');
-</script>
-
-    
 <body>
     <header>
-        <h1>KITA resource</h1>
-        <input type="search" placeholder="搜索...">
+        <h1><a href="index.html">KITA resource</a></h1>
+        <div class="search-box">
+            <input type="search" id="searchInput" placeholder="搜索文章...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
     </header>
+
     <nav>
-        <a href="index.html">首页</a>
-        <a href="resource.html">资源站</a>
-        <a href="about.html">关于</a>
-        <a href="donate.html">赞助</a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu-links">
+            <a href="index.html" class="active">首页</a>
+            <a href="resource.html">资源站</a>
+            <a href="about.html">关于</a>
+            <a href="donate.html">赞助</a>
+        </div>
     </nav>
-    <div class="content">
+
+    <div class="page-body">
         <main>
-            <div class="post">
+            <div class="post" data-title="【简日双语】尖帽子的魔法工坊01" data-tags="资源">
                 <h2><a href="subtitle.html">【简日双语】尖帽子的魔法工坊01</a></h2>
                 <div class="meta">KITA | 2026年04月07日 | 资源</div>
-                <img src="assets\chatu\tongari-hat_main.jpg" alt="作品描述" width="300">
-                <p>链接: https://yun.139.com/shareweb/#/w/i/2uh8U4dfhrp7a  提取码:2hnq</p>
+                <img src="assets/chatu/tongari-hat_main.jpg" alt="尖帽子的魔法工坊">
+                <p>链接: https://yun.139.com/shareweb/#/w/i/2uh8U4dfhrp7a 提取码:2hnq</p>
             </div>
 
-            <div class="post">
-                <h2><a href="ip.html">本站域名变更通知</a></h2>
-                <div class="meta">KITA | 2026年04月02日 | 其他</div>
-                <p>本站域名已更改为kitaresource.com</p>
-            </div>
-
-
-            <div class="post">
-                <h2><a href="ip.html">【新手向】为什么你的IP总被风控？代理质量检测指南，避免成为网站眼里的“显眼包”</a></h2>
+            <div class="post" data-title="【新手向】为什么你的IP总被风控？代理质量检测指南" data-tags="知识">
+                <h2><a href="ip.html">【新手向】为什么你的IP总被风控？代理质量检测指南，避免成为网站眼里的"显眼包"</a></h2>
                 <div class="meta">KITA | 2026年03月25日 | 知识</div>
                 <p>从IP角度分析被风控的原因及解决方案</p>
             </div>
 
-
-            <div class="post">
-                <h2><a href="#">KITA资源站已上线</a></h2>
+            <div class="post" data-title="KITA资源站已上线" data-tags="资源">
+                <h2><a href="resource.html">KITA资源站已上线</a></h2>
                 <div class="meta">KITA | 2026年03月20日 | 资源</div>
-                <img src="assets\chatu\KITAresource.jpg" alt="文章图片">
-                <p>可点击导航栏中“资源站”进入</p>
+                <img src="assets/chatu/KITAresource.jpg" alt="KITA资源站">
+                <p>可点击导航栏中"资源站"进入</p>
             </div>
-            
+
             <div class="pagination">
-                <a href="#">1</a>
-                
+                <a href="#" class="active">1</a>
             </div>
         </main>
+
         <aside>
+            <!-- 公告栏 -->
+            <div class="announcement-bar">
+                <h3>公告</h3>
+                <div class="notice-item">
+                    <div>本站域名已更改为 <strong>kitaresource.com</strong></div>
+                    <div class="notice-date">2026年04月02日</div>
+                </div>
+            </div>
+
+            <!-- 热门文章 -->
             <div class="sidebar-section">
                 <h3>热门文章</h3>
                 <ul>
-                    <li>
-                        <a href="ip.html">【新手向】为什么你的IP总被风控？代理质量检测指南，避免成为网站眼里的“显眼包”</a>
-                    <br><br>
-                        <a href="resource.html">KITA资源站已上线</a>
-                    <br><br>
-
-                        <a href="https://www.adspower.net/share/sLPNup" target="_blank"><img src="https://app-global.adspower.net/static/jpg/reward_post_3_CN.AHNxnUkN.jpg"width="100%"height="auto" alt="https://www.adspower.net/share/sLPNup"></a>
-                    </li>
+                    <li><a href="ip.html">【新手向】为什么你的IP总被风控？</a></li>
+                    <li><a href="resource.html">KITA资源站已上线</a></li>
                 </ul>
+            </div>
+
+            <!-- 推广 -->
+            <div class="sidebar-section">
+                <a href="https://www.adspower.net/share/sLPNup" target="_blank">
+                    <img src="https://app-global.adspower.net/static/jpg/reward_post_3_CN.AHNxnUkN.jpg"
+                        alt="AdsPower推广">
+                </a>
             </div>
         </aside>
     </div>
 
-    
-    
+    <footer>
+        <div class="footer-content">
+
+            <p class="copyright">Copyright &copy; 2026 KITA</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>

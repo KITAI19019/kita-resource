@@ -1,37 +1,66 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KITAres</title>
+    <title>赞助 — KITA resource</title>
+    <meta name="description" content="赞助KITA resource，支持我们的翻译和资源分享工作。">
     <link rel="stylesheet" href="blog.css">
 </head>
+
 <body>
     <header>
-        <h1>KITA resource</h1>
-        <input type="search" placeholder="搜索...">
+        <h1><a href="index.html">KITA resource</a></h1>
+        <div class="search-box">
+            <input type="search" id="searchInput" placeholder="搜索文章...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
     </header>
+
     <nav>
-        <a href="index.html">首页</a>
-        <a href="resource.html">资源站</a>
-        <a href="about.html">关于</a>
-        <a href="donate.html">赞助</a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu-links">
+            <a href="index.html">首页</a>
+            <a href="resource.html">资源站</a>
+            <a href="about.html">关于</a>
+            <a href="donate.html" class="active">赞助</a>
+        </div>
     </nav>
 
-        <div class="content">
+    <div class="page-body">
         <main>
             <div class="post">
-                <p dir="auto"><strong>赞助</strong>: 感谢你的支持！</p>
+                <h1>赞助</h1>
+                <p><strong>感谢你的支持！</strong></p>
                 <a href="https://ifdian.net/a/kitarescourse" target="_blank">
-                <img src="assets\chatu\爱发电.jpg" alt="支持我的翻译" width="10%">
+                    <img src="assets/chatu/爱发电.jpg" alt="支持我的翻译" style="max-width:180px;">
                 </a>
             </div>
+
             <div class="post">
-                <p><strong>赞助者名单：</strong></p>
+                <h2>赞助者名单</h2>
                 <p>暂时没有赞助/(ㄒoㄒ)/~~</p>
             </div>
-            </div>
         </main>
-        </div>
 
+        <aside>
+            <div class="announcement-bar">
+                <h3>公告</h3>
+                <div class="notice-item">
+                    <div>本站域名已更改为 <strong>kitaresource.com</strong></div>
+                    <div class="notice-date">2026年04月02日</div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">Copyright &copy; 2026 KITA</p>
+        </div>
+    </footer>
 </body>
+
+</html>
