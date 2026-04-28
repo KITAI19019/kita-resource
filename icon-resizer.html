@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICO 缩放调节器 — KITA resource</title>
+    <meta name="description" content="一个轻量级的浏览器端图标处理工具，专门解决 Windows 任务栏或桌面图标大小不一、视觉不统一的问题。支持实时缩放、视觉参考对齐、原生 ICO 导出。">
+    <link rel="canonical" href="https://kitaresource.com/icon-resizer.html">
+    <meta name="google-site-verification" content="RxwDLP9750uN12gTokWZt91GcfNB5LDwfVF3OKlH2Cw" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ICO 缩放调节器 — 让你的任务栏图标整整齐齐">
+    <meta property="og:description" content="一个轻量级的浏览器端图标处理工具，专门解决 Windows 任务栏或桌面图标大小不一、视觉不统一的问题。">
+    <meta property="og:url" content="https://kitaresource.com/icon-resizer.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://github.com/KITAI19019/icon-resizer/blob/main/img/icon.png?raw=true">
+    <meta property="og:site_name" content="KITA resource">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ICO 缩放调节器 — 让你的任务栏图标整整齐齐">
+    <meta name="twitter:description" content="一个轻量级的浏览器端图标处理工具，专门解决 Windows 任务栏或桌面图标大小不一、视觉不统一的问题。">
+    <meta name="twitter:image" content="https://github.com/KITAI19019/icon-resizer/blob/main/img/icon.png?raw=true">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ICO 缩放调节器 — 让你的任务栏图标整整齐齐",
+        "description": "一个轻量级的浏览器端图标处理工具，专门解决 Windows 任务栏或桌面图标大小不一、视觉不统一的问题。",
+        "image": "https://github.com/KITAI19019/icon-resizer/blob/main/img/icon.png?raw=true",
+        "author": {
+            "@type": "Person",
+            "name": "KITA"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "KITA resource",
+            "url": "https://kitaresource.com"
+        },
+        "datePublished": "2026-04-28",
+        "dateModified": "2026-04-28",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://kitaresource.com/icon-resizer.html"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="blog.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6Z9MSH7X2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-E6Z9MSH7X2');
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">KITA resource</a></h1>
+        <div class="search-box">
+            <input type="search" id="searchInput" placeholder="搜索文章...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </header>
+
+    <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu-links">
+            <a href="index.html">首页</a>
+            <a href="resource.html">资源站</a>
+            <a href="about.html">关于</a>
+            <a href="donate.html">赞助</a>
+        </div>
+    </nav>
+
+    <div class="page-body">
+        <main>
+            <div class="post">
+                <h1>🛠️ ICO 缩放调节器 — 让你的任务栏图标整整齐齐</h1>
+                <div class="meta">KITA | 2026年04月28日 | 工具</div>
+
+                <h3>起因</h3>
+                <p>事情是这样的——我一直喜欢自定义 Windows 任务栏图标。像 Chrome、VSCode 这些软件的图标都设计得很好看，大小也很统一。但当我想给 GitHub Desktop
+                    换上自己设计的图标时，问题就来了：<strong>图标大小总是对不齐</strong>。</p>
+
+                <p>明明都是 256×256 的 ICO 文件，钉到任务栏上一看，GitHub 的图标就是比 Chrome 小一圈。不管我怎么调整源图片，肉眼看上去就是不和谐。</p>
+
+                <img src="https://github.com/KITAI19019/icon-resizer/blob/main/img/%E8%B0%83%E6%95%B4%E5%89%8D.png?raw=true"
+                    alt="调整前 — 图标大小不一致">
+                <p style="text-align:center;color:var(--c-text-secondary);font-size:0.82rem;">▲ 调整前：图标大小参差不齐，视觉上很不统一</p>
+
+                <h3>原因分析</h3>
+                <p>研究之后发现，问题出在<strong>图标主体的「视觉面积」</strong>上。Chrome 的图标是一个接近正圆的形状，几乎填满了整个画布；而 GitHub 的 Octocat
+                    是一个不规则图形，四周有大量留白。虽然像素尺寸一样，但人眼感知到的大小完全不同。</p>
+
+                <p>专业的图标设计中，设计师会通过一个叫「光学尺寸校正」（Optical
+                    Sizing）的技巧来解决这个问题——对不同形状的图标施加不同的缩放比例，让它们<strong>看起来一样大</strong>。但对于普通用户来说，手动用 PS 一个个调太麻烦了。</p>
+
+                <h3>于是我做了这个工具</h3>
+                <p><strong>ICO 缩放调节器</strong>是一个完全运行在浏览器中的轻量级工具，专门解决这个痛点：</p>
+                <ul>
+                    <li><strong>一键上传</strong>：支持 PNG、JPG、WebP 格式</li>
+                    <li><strong>实时缩放</strong>：通过滑块自由调整图标主体大小，去除多余留白</li>
+                    <li><strong>视觉参考</strong>：内置"标准参考圆"，助你对齐 Chrome、Gmail 等主流图标的视觉面积</li>
+                    <li><strong>原生导出</strong>：直接生成标准的 256×256 <code>.ico</code> 格式，支持透明度</li>
+                    <li><strong>隐私安全</strong>：所有图片处理均在本地浏览器 Canvas 完成，<strong>不会上传到任何服务器</strong></li>
+                </ul>
+
+                <h3>使用方法</h3>
+                <ol>
+                    <li><strong>上传</strong>：将你想要修改的图标文件拖入上传区</li>
+                    <li><strong>缩放</strong>：拖动滑块，观察图标主体，使其边缘接近虚线"参考圆"</li>
+                    <li><strong>下载</strong>：点击"保存并下载 ICO"，然后在 Windows 中替换原有的快捷方式图标即可</li>
+                </ol>
+
+                <h3>效果对比</h3>
+                <img src="https://github.com/KITAI19019/icon-resizer/blob/main/img/%E8%B0%83%E6%95%B4%E5%90%8E.png?raw=true"
+                    alt="调整后 — 图标大小统一">
+                <p style="text-align:center;color:var(--c-text-secondary);font-size:0.82rem;">▲ 调整后：所有图标视觉面积一致，整洁美观</p>
+
+                <p>调整前后的差异一目了然。只需要几秒钟，你的任务栏就能变得整整齐齐。</p>
+
+                <h3>立即使用</h3>
+                <p>工具已部署上线，点击下方按钮即可直接在浏览器中使用，无需下载安装：</p>
+                <p>
+                    <a href="https://icon.kitaresource.com" target="_blank" class="btn">立即使用</a>
+                    <a href="https://github.com/KITAI19019/icon-resizer" target="_blank" class="btn">项目地址</a>
+                </p>
+            </div>
+        </main>
+
+        <aside>
+            <div class="sidebar-section">
+                <h3>热门内容</h3>
+                <ul>
+                    <li><a href="icon-resizer.html">ICO 缩放调节器</a></li>
+                    <li><a href="ip.html">【新手向】为什么你的IP总被风控？</a></li>
+                    <li><a href="resource.html">KITA资源站已上线</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">Copyright &copy; 2026 KITA</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
