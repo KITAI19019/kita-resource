@@ -8,14 +8,14 @@
     const searchResults = document.getElementById('searchResults');
     if (!searchInput || !searchResults) return;
 
-    // Build article index from .post elements on the page
-    const posts = Array.from(document.querySelectorAll('.post[data-title]'));
-    const articles = posts.map(post => ({
-        title: post.getAttribute('data-title') || '',
-        tags: post.getAttribute('data-tags') || '',
-        summary: post.querySelector('p') ? post.querySelector('p').textContent : '',
-        link: post.querySelector('h2 a') ? post.querySelector('h2 a').getAttribute('href') : '#',
-        element: post
+    // Build a lightweight index from articles and resource cards on the current page.
+    const searchableItems = Array.from(document.querySelectorAll('.post[data-title], .resource-card'));
+    const articles = searchableItems.map(item => ({
+        title: item.getAttribute('data-title') || item.querySelector('h2, h3')?.textContent || '',
+        tags: item.getAttribute('data-tags') || item.querySelector('.tag')?.textContent || '',
+        summary: item.querySelector('p') ? item.querySelector('p').textContent : '',
+        link: item.querySelector('h2 a, .resource-links a, a') ? item.querySelector('h2 a, .resource-links a, a').getAttribute('href') : '#',
+        element: item
     }));
 
     searchInput.addEventListener('input', function () {
@@ -23,8 +23,7 @@
         if (!query) {
             searchResults.classList.remove('active');
             searchResults.innerHTML = '';
-            // Show all posts
-            posts.forEach(p => p.classList.remove('search-hidden'));
+            searchableItems.forEach(item => item.classList.remove('search-hidden'));
             return;
         }
 
@@ -34,15 +33,14 @@
             a.summary.toLowerCase().includes(query)
         );
 
-        // Filter visible posts
-        posts.forEach(p => {
-            const title = (p.getAttribute('data-title') || '').toLowerCase();
-            const tags = (p.getAttribute('data-tags') || '').toLowerCase();
-            const text = p.textContent.toLowerCase();
+        searchableItems.forEach(item => {
+            const title = (item.getAttribute('data-title') || item.querySelector('h2, h3')?.textContent || '').toLowerCase();
+            const tags = (item.getAttribute('data-tags') || item.querySelector('.tag')?.textContent || '').toLowerCase();
+            const text = item.textContent.toLowerCase();
             if (title.includes(query) || tags.includes(query) || text.includes(query)) {
-                p.classList.remove('search-hidden');
+                item.classList.remove('search-hidden');
             } else {
-                p.classList.add('search-hidden');
+                item.classList.add('search-hidden');
             }
         });
 
@@ -70,7 +68,7 @@
     // Re-show all posts when clearing search
     searchInput.addEventListener('search', function () {
         if (!this.value) {
-            posts.forEach(p => p.classList.remove('search-hidden'));
+            searchableItems.forEach(item => item.classList.remove('search-hidden'));
             searchResults.classList.remove('active');
         }
     });

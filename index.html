@@ -5,26 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KITA resource — 首页</title>
-    <meta name="description" content="KITA resource，分享资源、字幕汉化与实用知识。">
+    <meta name="description" content="KITA resource，分享资源、字幕汉化、个人工具与实用知识。">
     <link rel="canonical" href="https://kitaresource.com/">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="KITA resource — 首页">
-    <meta property="og:description" content="KITA resource，分享资源、字幕汉化与实用知识。">
+    <meta property="og:description" content="KITA resource，分享资源、字幕汉化、个人工具与实用知识。">
     <meta property="og:url" content="https://kitaresource.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KITA resource">
     <meta property="og:locale" content="zh_CN">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="KITA resource — 首页">
-    <meta name="twitter:description" content="KITA resource，分享资源、字幕汉化与实用知识。">
+    <meta name="twitter:description" content="KITA resource，分享资源、字幕汉化、个人工具与实用知识。">
 
     <link rel="stylesheet" href="blog.css">
+    <link rel="icon" type="image/png" href="assets/kita-logo-64.png">
     <meta name="google-site-verification" content="RxwDLP9750uN12gTokWZt91GcfNB5LDwfVF3OKlH2Cw" />
     <meta name="baidu-site-verification" content="codeva-1CM4PuyWOF" />
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6Z9MSH7X2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -36,9 +34,9 @@
 
 <body>
     <header>
-        <h1><a href="index.html">KITA resource</a></h1>
+        <h1><a href="index.html"><img src="assets/kita-logo-64.png" alt="" class="site-logo">KITA resource</a></h1>
         <div class="search-box">
-            <input type="search" id="searchInput" placeholder="搜索文章...">
+            <input type="search" id="searchInput" placeholder="搜索文章、工具、资源...">
             <div class="search-results" id="searchResults"></div>
         </div>
     </header>
@@ -49,38 +47,89 @@
         <div class="menu-links">
             <a href="index.html" class="active">首页</a>
             <a href="resource.html">资源站</a>
+            <a href="contact.html">反馈</a>
             <a href="about.html">关于</a>
-            <a href="donate.html">赞助</a>
         </div>
     </nav>
 
     <div class="page-body">
         <main>
+            <section class="hero">
+                <div>
+                    <div class="eyebrow">KITA RESOURCE</div>
+                    <h2>个人资源与工具档案库</h2>
+                    <p>这里收纳字幕汉化、实用工具、网络笔记和常用资源站点。入口尽量保持直接，说明尽量写得清楚，方便自己回查，也方便需要的人快速取用。</p>
+                    <div class="hero-actions">
+                        <a href="resource.html" class="btn">进入资源站</a>
+                        <a href="contact.html" class="btn secondary">提交反馈</a>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div>
+                        <strong>04</strong>
+                        <span>首页精选内容</span>
+                    </div>
+                    <div>
+                        <strong>13</strong>
+                        <span>资源分类索引</span>
+                    </div>
+                    <div>
+                        <strong>2026</strong>
+                        <span>持续整理中</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-grid" aria-label="常用入口">
+                <a href="subtitle.html" class="link-card">
+                    <span class="card-kicker">SUBTITLE</span>
+                    <h3>字幕汉化</h3>
+                    <p>双语字幕、字幕文件与相关整理入口。</p>
+                </a>
+                <a href="icon-resizer.html" class="link-card">
+                    <span class="card-kicker">TOOL</span>
+                    <h3>ICO 缩放调节器</h3>
+                    <p>浏览器端处理图标尺寸，修整任务栏视觉大小。</p>
+                </a>
+                <a href="ip.html" class="link-card">
+                    <span class="card-kicker">NOTE</span>
+                    <h3>IP 风控指南</h3>
+                    <p>从 IP 信誉、指纹与节点质量理解常见风控。</p>
+                </a>
+            </section>
+
+            <div class="section-title">
+                <div>
+                    <h2>最新记录</h2>
+                    <p>按时间整理的文章、工具与资源更新。</p>
+                </div>
+            </div>
+
             <div class="post" data-title="ICO 缩放调节器 — 让你的任务栏图标整整齐齐" data-tags="工具">
-                <h2><a href="icon-resizer.html">🛠️ ICO 缩放调节器 — 让你的任务栏图标整整齐齐</a></h2>
+                <h2><a href="icon-resizer.html">ICO 缩放调节器 — 让你的任务栏图标整整齐齐</a></h2>
                 <div class="meta">KITA | 2026年04月28日 | 工具</div>
                 <img src="https://github.com/KITAI19019/icon-resizer/blob/main/img/icon.png?raw=true" alt="ICO 缩放调节器">
                 <p>一个轻量级的浏览器端图标处理工具，专门解决 Windows 任务栏或桌面图标大小不一、视觉不统一的问题。支持实时缩放、视觉参考对齐、原生 ICO 导出。</p>
             </div>
 
-            <div class="post" data-title="【简日双语】尖帽子的魔法工坊01" data-tags="资源">
+            <div class="post" data-title="【简日双语】尖帽子的魔法工坊01" data-tags="资源 字幕">
                 <h2><a href="subtitle.html">【简日双语】尖帽子的魔法工坊01</a></h2>
                 <div class="meta">KITA | 2026年04月07日 | 资源</div>
                 <img src="assets/chatu/tongari-hat_main.jpg" alt="尖帽子的魔法工坊">
                 <p>链接: https://yun.139.com/shareweb/#/w/i/2uh8U4dfhrp7a 提取码:2hnq</p>
             </div>
 
-            <div class="post" data-title="【新手向】为什么你的IP总被风控？代理质量检测指南" data-tags="知识">
+            <div class="post" data-title="【新手向】为什么你的IP总被风控？代理质量检测指南" data-tags="知识 网络">
                 <h2><a href="ip.html">【新手向】为什么你的IP总被风控？代理质量检测指南，避免成为网站眼里的"显眼包"</a></h2>
                 <div class="meta">KITA | 2026年03月25日 | 知识</div>
-                <p>从IP角度分析被风控的原因及解决方案</p>
+                <p>从 IP 角度分析被风控的原因及解决方案。</p>
             </div>
 
-            <div class="post" data-title="KITA资源站已上线" data-tags="资源">
+            <div class="post" data-title="KITA资源站已上线" data-tags="资源 资源站">
                 <h2><a href="resource.html">KITA资源站已上线</a></h2>
                 <div class="meta">KITA | 2026年03月20日 | 资源</div>
                 <img src="assets/chatu/KITAresource.jpg" alt="KITA资源站">
-                <p>可点击导航栏中"资源站"进入</p>
+                <p>常用资源站、工具与网络服务入口已集中整理到资源站页面。</p>
             </div>
 
             <div class="pagination">
@@ -89,7 +138,6 @@
         </main>
 
         <aside>
-            <!-- 公告栏 -->
             <div class="announcement-bar">
                 <h3>公告</h3>
                 <div class="notice-item">
@@ -98,22 +146,23 @@
                 </div>
             </div>
 
-            <!-- 热门文章 -->
             <div class="sidebar-section">
                 <h3>热门文章</h3>
                 <ul>
                     <li><a href="icon-resizer.html">ICO 缩放调节器</a></li>
-                    <li><a href="ip.html">【新手向】为什么你的IP总被风控？</a></li>
+                    <li><a href="ip.html">为什么你的IP总被风控？</a></li>
                     <li><a href="resource.html">KITA资源站已上线</a></li>
                 </ul>
             </div>
-
         </aside>
     </div>
 
     <footer>
         <div class="footer-content">
-
+            <nav class="footer-links">
+                <a href="https://github.com/kitai19019/" target="_blank">GitHub主页</a>
+                <a href="contact.html">提交反馈</a>
+            </nav>
             <p class="copyright">Copyright &copy; 2026 KITA</p>
         </div>
     </footer>
